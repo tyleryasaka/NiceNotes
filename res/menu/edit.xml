@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Edit" >
+    <item android:id="@+id/delete"
+        android:title="@string/delete_note"
+        android:orderInCategory="10"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_discard"/>
+    <item android:id="@+id/email"
+        android:title="@string/email_note"
+        android:orderInCategory="9"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_email"/>
+</menu>

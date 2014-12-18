@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Notes" >
+    <item android:id="@+id/action_settings"
+        android:title="@string/settings"
+        android:orderInCategory="9"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_settings"/>
+    <item android:id="@+id/new_note"
+        android:title="@string/new_note"
+        android:orderInCategory="10"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_new">
+    </item>
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Nice Notes</string>
+    <string name="settings">Settings</string>
+    <string name="new_note">New Note</string>
+    <string name="notes">Notes</string>
+    <string name="title_activity_edit">Edit Note</string>
+    <string name="key_id">id</string>
+    <string name="key_content">content</string>
+    <string name="delete_note">Delete</string>
+    <string name="delete_note_confirm">"Delete this note?"</string>
+    <string name="email_note">Email</string>
+    <string name="email_note_subject">My Note</string>
+    <string name="delete_all">Delete All Notes</string>
+    <string name="delete_all_confirm">"Delete all of your notes?"</string>
+    <string name="email_all">Email All Notes</string>
+    <string name="email_all_subject">My Notes</string>
+
+</resources>
