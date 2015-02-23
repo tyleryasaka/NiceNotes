@@ -63,11 +63,11 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         values.put(KEY_ACCESSED, time);
 
         // 3. insert
-        long new_id = db.insert(TABLE_NOTES, // table
+        db.insert(TABLE_NOTES, // table
                 null, //nullColumnHack
                 values); // key/value -> keys = column names/ values = column values
 
-        note.setId(new_id);
+        //note.setId(new_id);
 
         // 4. close
         db.close();
@@ -93,19 +93,19 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         if (cursor != null)
             cursor.moveToFirst();
 
-        // 4. build book object
+        // 4. build note object
         Note note = new Note();
         note.setId(Integer.parseInt(cursor.getString(0)));
-        note.setContent(cursor.getString(1));
+        note.setContent(cursor.getString(1));//cursor.getString(1)+" time:"
 
-        // 5. return book
+        // 5. return note
         return note;
     }
 
     public Cursor getAllNotes() {
 
         // 1. build the query
-        String query = "SELECT id AS _id,* FROM " + TABLE_NOTES + " ORDER BY date(" + KEY_ACCESSED + ") DESC";
+        String query = "SELECT id AS _id,* FROM " + TABLE_NOTES + " ORDER BY date(" + KEY_ACCESSED + ") ASC";
 
         // 2. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
@@ -127,6 +127,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         int time = (int) (System.currentTimeMillis());
         ContentValues values = new ContentValues();
         values.put(KEY_CONTENT, note.getContent());
+        values.put(KEY_ACCESSED, time);
 
         // 3. updating row
         int i = db.update(TABLE_NOTES, //table
@@ -138,6 +139,17 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         db.close();
 
         return i;
+    }
+
+    public void updateNoteAccessed(long id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        int time = (int) (System.currentTimeMillis());
+        ContentValues values = new ContentValues();
+        values.put(KEY_ACCESSED, time);
+
+        int i = db.update(TABLE_NOTES, values, KEY_ID+" = ?",
+                new String[] { String.valueOf(id) });
     }
 
     public void deleteNote(long id) {

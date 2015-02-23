@@ -1,14 +1,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Edit" >
-    <item android:id="@+id/delete"
-        android:title="@string/delete_note"
+    <item android:id="@+id/discard"
+        android:title="@string/discard_note"
         android:orderInCategory="10"
         android:showAsAction="ifRoom"
-        android:icon="@drawable/ic_action_discard"/>
-    <item android:id="@+id/email"
-        android:title="@string/email_note"
-        android:orderInCategory="9"
-        android:showAsAction="ifRoom"
-        android:icon="@drawable/ic_action_email"/>
+        android:icon="@drawable/ic_action_cancel"/>
+    <item android:id="@+id/save"
+        android:title="@string/save_note"
+        android:orderInCategory="11"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_accept"/>
+    <item android:id="@+id/more"
+        android:title="@string/menu_overflow"
+        android:orderInCategory="12"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_overflow">
+        <menu>
+            <item android:id="@+id/delete"
+                android:title="@string/delete_note"
+                android:orderInCategory="9"
+                android:showAsAction="ifRoom"
+                android:icon="@drawable/ic_action_discard"/>
+            <item android:id="@+id/email"
+                android:title="@string/email_note"
+                android:orderInCategory="10"
+                android:showAsAction="ifRoom"
+                android:icon="@drawable/ic_action_email"/>
+        </menu>
+    </item>
 </menu>

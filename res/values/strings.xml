@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Nice Notes</string>
-    <string name="settings">Settings</string>
-    <string name="new_note">New Note</string>
-    <string name="notes">Notes</string>
-    <string name="title_activity_edit">Edit Note</string>
+    <string name="app_name">Nice Notes</string><!--app name-->
+    <string name="settings">Settings</string><!--settings activity title-->
+    <string name="new_note">New Note</string><!--new note activity title-->
+    <string name="notes">Notes</string><!--notes list activity title-->
+    <string name="title_activity_edit">Edit Note</string><!--edit activity title-->
     <string name="key_id">id</string>
     <string name="key_content">content</string>
-    <string name="delete_note">Delete</string>
-    <string name="delete_note_confirm">"Delete this note?"</string>
-    <string name="email_note">Email</string>
-    <string name="email_note_subject">My Note</string>
-    <string name="delete_all">Delete All Notes</string>
-    <string name="delete_all_confirm">"Delete all of your notes?"</string>
-    <string name="email_all">Email All Notes</string>
-    <string name="email_all_subject">My Notes</string>
+    <string name="delete_note">Delete</string><!--confirm delete single dialog title-->
+    <string name="delete_note_confirm">"Delete this note?"</string><!--confirm delete single dialog text-->
+    <string name="email_note">Email</string><!--email action text-->
+    <string name="menu_overflow">More</string><!--menu overflow action text-->
+    <string name="email_note_subject">My Note</string><!--single note email subject-->
+    <string name="delete_all">Delete All Notes</string><!--confirm delete all dialog title-->
+    <string name="delete_all_confirm">"Delete all of your notes?"</string><!--confirm delete all dialog text-->
+    <string name="email_all">Email All Notes</string><!--email all button text -->
+    <string name="email_all_subject">My Notes</string><!--all notes email subject-->
+    <string name="save_note">Save</string><!--save action text-->
+    <string name="discard_note">Discard Changes</string><!--confirm discard dialog title -->
+    <string name="discard_note_confirm">Discard changes. (Undo any changes made since your last edit.) Are you sure?</string><!--confirm discard dialog text-->
+    <string name="toast_deleted">Note deleted</string><!--toast when note is deleted-->
+    <string name="toast_saved">Note saved</string><!--toast when note is saved-->
 
 </resources>
