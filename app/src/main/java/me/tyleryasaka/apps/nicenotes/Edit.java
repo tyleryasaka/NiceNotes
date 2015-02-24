@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class Edit extends Activity {
 
     private long id;
-    private boolean discard_note = false;//flag to turn on when the user clicks "discard note"
+    private boolean save_note = true;//flag to turn off when the user clicks "discard" or "delete"
     private boolean is_new;
     private boolean saved_note = false;//to prevent weird glitch where sometimes note saves multiple times
 
@@ -69,6 +69,7 @@ public class Edit extends Activity {
                             MySQLiteHelper db = new MySQLiteHelper(getApplicationContext());
                             db.deleteNote(id);
                             Toast.makeText(getApplicationContext(),R.string.toast_deleted,Toast.LENGTH_SHORT).show();
+                            save_note = false;
                             finish();
                         }
                     })
@@ -98,7 +99,7 @@ public class Edit extends Activity {
                         .setMessage(R.string.discard_note_confirm)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
-                                discard_note = true;
+                                save_note = false;
                                 finish();
                             }
                         })
@@ -120,7 +121,7 @@ public class Edit extends Activity {
         EditText note_text = (EditText)findViewById(R.id.edit_note);
 
         //if the user clicked "discard" or note is empty, will not save
-        if(!discard_note && note_text.getText().length() > 0) saveNote();
+        if(save_note && note_text.getText().length() > 0) saveNote();
     }
 
     public void saveNote() {

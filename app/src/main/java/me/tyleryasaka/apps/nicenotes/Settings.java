@@ -10,8 +10,9 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
 
 public class Settings extends Activity {
 
@@ -78,5 +79,16 @@ public class Settings extends Activity {
                 }
             }
         });
+
+        MySQLiteHelper db = new MySQLiteHelper(app_context);
+
+        Spinner ordering_selector = (Spinner) findViewById(R.id.ordering_selector);
+        ArrayAdapter<CharSequence> ordering_adapter = ArrayAdapter.createFromResource(this,
+                R.array.ordering_options, android.R.layout.simple_spinner_item);
+        ordering_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ordering_selector.setAdapter(ordering_adapter);
+        int current_orderby = db.getOrderby();
+        ordering_selector.setSelection(current_orderby);
+        ordering_selector.setOnItemSelectedListener(new orderbySelector(this));
     }
 }

@@ -22,5 +22,11 @@
     <string name="discard_note_confirm">Discard changes. (Undo any changes made since your last edit.) Are you sure?</string><!--confirm discard dialog text-->
     <string name="toast_deleted">Note deleted</string><!--toast when note is deleted-->
     <string name="toast_saved">Note saved</string><!--toast when note is saved-->
+    <string name="order_by">Order notes by:</string><!--order by text-->
+    <string-array name="ordering_options"><!--options available in "order by" setting-->
+        <item>Time accessed - recent first</item>
+        <item>Time created - newest first</item>
+        <item>Time created - oldest first</item>
+    </string-array>
 
 </resources>

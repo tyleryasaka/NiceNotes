@@ -22,4 +22,19 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
     </Button>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        style="@style/settings_group">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/order_by"
+            style="@style/settings_label"/>
+        <Spinner
+            android:id="@+id/ordering_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 </LinearLayout>
