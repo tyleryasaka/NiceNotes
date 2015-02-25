@@ -150,18 +150,18 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         switch(preference){
             case 1:
                 orderby_property = KEY_CREATED;
-                orderby_direction = "ASC";
+                orderby_direction = "DESC";
                 break;
             case 2:
                 orderby_property = KEY_CREATED;
-                orderby_direction = "DESC";
+                orderby_direction = "ASC";
                 break;
             default:
                 orderby_property = KEY_ACCESSED;
-                orderby_direction = "ASC";
+                orderby_direction = "DESC";
         }
 
-        String query = "SELECT id AS _id,* FROM " + TABLE_NOTES + " ORDER BY date(" + orderby_property + ") " + orderby_direction;
+        String query = "SELECT " + KEY_ID + " AS _id, " + KEY_CONTENT + " FROM " + TABLE_NOTES + " ORDER BY " + orderby_property + " " + orderby_direction;// + ", id " + orderby_direction;
 
         return db.rawQuery(query, null);
     }

@@ -37,4 +37,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
+    <Button
+        android:id="@+id/back"
+        android:text="@+string/back"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+    </Button>
 </LinearLayout>

@@ -18,8 +18,8 @@
     <string name="email_all">Email All Notes</string><!--email all button text -->
     <string name="email_all_subject">My Notes</string><!--all notes email subject-->
     <string name="save_note">Save</string><!--save action text-->
-    <string name="discard_note">Discard Changes</string><!--confirm discard dialog title -->
-    <string name="discard_note_confirm">Discard changes. (Undo any changes made since your last edit.) Are you sure?</string><!--confirm discard dialog text-->
+    <string name="discard_note">Cancel</string><!--confirm discard dialog title -->
+    <string name="discard_note_confirm">Cancel these changes. Are you sure?</string><!--confirm discard dialog text-->
     <string name="toast_deleted">Note deleted</string><!--toast when note is deleted-->
     <string name="toast_saved">Note saved</string><!--toast when note is saved-->
     <string name="order_by">Order notes by:</string><!--order by text-->
@@ -28,5 +28,6 @@
         <item>Time created - newest first</item>
         <item>Time created - oldest first</item>
     </string-array>
+    <string name="back">Back</string>
 
 </resources>

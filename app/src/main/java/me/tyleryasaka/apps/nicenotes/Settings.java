@@ -25,6 +25,7 @@ public class Settings extends Activity {
 
         Button delete_all = (Button) findViewById(R.id.delete_all);
         Button email_all = (Button) findViewById(R.id.email_all);
+        Button back = (Button) findViewById(R.id.back);
 
         final Context app_context = this;
 
@@ -77,6 +78,13 @@ public class Settings extends Activity {
                 else {
                     Toast.makeText(getApplicationContext(), "There are no notes to email.", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        back.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 
